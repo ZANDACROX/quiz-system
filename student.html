@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="topbar">
+    <h1>Online Quiz Management System</h1>
+    <div class="row"><span id="who"></span><button class="btn secondary small" id="logout">Logout</button></div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <h2>Quiz Topic</h2>
+      <p id="topic" style="font-weight:600"></p>
+      <p class="muted" id="info" style="margin:6px 0"></p>
+      <p class="muted">Each question has one correct answer. The quiz auto-submits when the timer ends.</p>
+      <button class="btn" id="start">Start Quiz</button>
+    </div>
+    <div class="card">
+      <h2>My Previous Attempts</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Date</th><th>Marks</th><th>Percentage</th><th>Status</th></tr></thead>
+          <tbody id="history"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="js/data.js"></script>
+  <script src="js/student.js"></script>
+</body>
+</html>

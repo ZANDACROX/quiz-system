@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="topbar">
+    <h1>Admin Panel</h1>
+    <button class="btn secondary small" id="logout">Logout</button>
+  </div>
+  <div class="container">
+
+    <div class="card">
+      <h2>Question Bank (<span id="count">0</span>)</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>#</th><th>Question</th><th>Options</th><th>Answer</th><th>Actions</th></tr></thead>
+          <tbody id="qBody"></tbody>
+        </table>
+      </div>
+      <button class="btn secondary small" id="resetQ" style="margin-top:12px">Reset to Default Questions</button>
+    </div>
+
+    <div class="card">
+      <h2 id="formTitle">Add New Question</h2>
+      <label for="qText">Question</label>
+      <textarea id="qText"></textarea>
+      <div class="grid2">
+        <div><label for="o0">Option A</label><input type="text" id="o0"></div>
+        <div><label for="o1">Option B</label><input type="text" id="o1"></div>
+        <div><label for="o2">Option C</label><input type="text" id="o2"></div>
+        <div><label for="o3">Option D</label><input type="text" id="o3"></div>
+      </div>
+      <label for="qAns">Correct Answer</label>
+      <select id="qAns"><option value="0">A</option><option value="1">B</option><option value="2">C</option><option value="3">D</option></select>
+      <div class="row">
+        <button class="btn" id="saveQ">Save Question</button>
+        <button class="btn secondary hidden" id="cancelEdit">Cancel Edit</button>
+      </div>
+      <div id="msg" class="msg"></div>
+    </div>
+
+    <div class="card">
+      <h2>Student Results</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Date</th><th>Student</th><th>Marks</th><th>%</th><th>Status</th></tr></thead>
+          <tbody id="rBody"></tbody>
+        </table>
+      </div>
+      <button class="btn danger small" id="clearR" style="margin-top:12px">Clear All Results</button>
+    </div>
+  </div>
+  <script src="js/data.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

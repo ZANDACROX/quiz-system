@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="topbar sticky">
+    <h1>Engineering Basics Quiz</h1>
+    <div class="row"><span id="pageInfo"></span><span class="timer" id="timer">⏱ --:--</span></div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <div id="questions"></div>
+      <div class="nav">
+        <button class="btn secondary" id="prev">← Previous</button>
+        <button class="btn" id="next">Next →</button>
+        <button class="btn danger hidden" id="submit">Submit Quiz</button>
+      </div>
+    </div>
+  </div>
+  <script src="js/data.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>

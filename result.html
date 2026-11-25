@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Quiz Result</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="topbar">
+    <h1>Quiz Result</h1>
+    <button class="btn secondary small" id="logout">Logout</button>
+  </div>
+  <div class="container">
+    <div class="card">
+      <h2 id="title">Result</h2>
+      <div class="stats">
+        <div class="stat"><b id="marks"></b>Marks</div>
+        <div class="stat"><b id="pct"></b>Percentage</div>
+        <div class="stat"><b id="status"></b>Performance</div>
+        <div class="stat"><b id="time"></b>Time Taken</div>
+      </div>
+      <a class="btn" href="student.html" style="display:inline-block;text-decoration:none">Back to Dashboard</a>
+    </div>
+    <div class="card">
+      <h2>Answer Review</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>#</th><th>Question</th><th>Your Answer</th><th>Correct Answer</th></tr></thead>
+          <tbody id="review"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="js/data.js"></script>
+  <script src="js/result.js"></script>
+</body>
+</html>
